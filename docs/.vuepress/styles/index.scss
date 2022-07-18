@@ -2,12 +2,10 @@
   // font vars
   --font-family: ubuntu, seguiemj, harmony, iconfont, "Open Sans", -apple-system,
     "BlinkMacSystemFont", "Microsoft YaHei", "Clear Sans";
-
   // brand colors
 
   --c-brand: #ed6ea0;
   --c-brand-light: #ec8c69;
-
   // background colors
   --c-bg: #fff;
   --c-bg-light: #f3f4f5;
@@ -15,7 +13,6 @@
   --c-bg-navbar: var(--c-bg);
   --c-bg-sidebar: var(--c-bg);
   --c-bg-arrow: #ccc;
-
   // text colors
   --c-text: #2c3e50;
   --c-text-accent: var(--c-brand);
@@ -23,11 +20,9 @@
   --c-text-lighter: #4e6e8e;
   --c-text-lightest: #6a8bad;
   --c-text-quote: var(--c-text-light);
-
   // border colors
   --c-border: #eaecef;
   --c-border-dark: #dfe2e5;
-
   // custom container colors
   --c-tip: #42b983;
   --c-tip-bg: var(--c-bg-light);
@@ -45,12 +40,10 @@
   --c-danger-text: #600;
   --c-danger-text-accent: var(--c-text);
   --c-details-bg: #eee;
-
   // badge component colors
   --c-badge-tip: var(--c-tip);
   --c-badge-warning: var(--c-warning);
   --c-badge-danger: var(--c-danger);
-
   // code blocks vars
   --code-bg-color: #282c34;
   --code-hl-bg-color: rgba(0, 0, 0, 0.66);
@@ -59,7 +52,6 @@
   --font-family-code: Hack, Consolas, Monaco, "Andale Mono", "Ubuntu Mono",
     seguiemj, harmony, "Open Sans", -apple-system, "BlinkMacSystemFont",
     "Microsoft YaHei", "Clear Sans", monospace;
-
   // layout vars
   --navbar-height: 3.6rem;
   --navbar-padding-v: 0.7rem;
@@ -129,22 +121,18 @@ html.dark {
   // brand colors
   --c-brand: #ec8c69;
   --c-brand-light: #ed6ea0;
-
   // background colors
   --c-bg: #121212;
   --c-bg-light: #2b313a;
   --c-bg-lighter: #262c34;
-
   // text colors
   --c-text: #adbac7;
   --c-text-light: #96a7b7;
   --c-text-lighter: #8b9eb0;
   --c-text-lightest: #8094a8;
-
   // border colors
   --c-border: #3e4c5a;
   --c-border-dark: #34404c;
-
   // custom container colors
   --c-tip: #318a62;
   --c-warning: #ceab00;
@@ -156,7 +144,6 @@ html.dark {
   --c-danger-title: #610000;
   --c-danger-text: #3a0000;
   --c-details-bg: #323843;
-
   // code blocks vars
   --code-hl-bg-color: #363b46;
 }
@@ -175,13 +162,18 @@ html.dark .DocSearch {
 html {
   body {
     &::-webkit-scrollbar,
+    table::-webkit-scrollbar,
+    .MathJax::-webkit-scrollbar,
     div[class*="language-"].line-numbers-mode pre::-webkit-scrollbar {
       display: block;
+
       width: 10px;
       height: 10px;
     }
 
     &::-webkit-scrollbar-thumb,
+    table::-webkit-scrollbar-thumb,
+    .MathJax::-webkit-scrollbar-thumb,
     div[class*="language-"].line-numbers-mode pre::-webkit-scrollbar-thumb {
       border: 3px solid transparent;
       border-radius: 5px;
@@ -189,10 +181,15 @@ html {
       background-clip: padding-box;
     }
 
+    .MathJax {
+      overflow: scroll;
+    }
+
     .home .hero {
       h1 {
         font-size: 40px;
         font-weight: 300;
+
         word-break: keep-all;
       }
 
@@ -203,6 +200,7 @@ html {
       .action-button {
         position: relative;
         z-index: 1;
+
         border-radius: 2rem;
         &.primary {
           color: #fff;
@@ -217,8 +215,10 @@ html {
               right: 8px;
               bottom: 8px;
               left: 8px;
+
               content: "";
               animation: blur 0.5s forwards;
+
               border-radius: inherit;
               background-color: #ed6ea0;
               background-image: linear-gradient(
@@ -253,8 +253,11 @@ html {
       right: 0;
       bottom: 0;
       left: 0;
+
       display: block;
+
       content: "";
+
       backdrop-filter: blur(8px);
     }
 
@@ -265,19 +268,27 @@ html {
       right: 0;
       bottom: 0;
       left: 0;
+
       display: block;
+
       content: "";
+
       opacity: 0.8;
       background-color: var(--c-bg);
     }
 
     .site-name {
       font-family: pacifico, var(--font-family);
+      font-size: 1.2rem;
       font-weight: 100;
+
       display: inline-block;
       overflow: hidden;
-      width: 83px;
+
+      width: 128px;
+
       white-space: nowrap;
+
       color: transparent;
       background-color: #ed6ea0;
       background-image: linear-gradient(to right, #ed6ea0 0%, #ec8c69 100%);
@@ -288,14 +299,14 @@ html {
 }
 
 nav.table-of-contents > ul > li {
-  &:nth-child(1),
-  &:nth-child(2) {
+  &:nth-child(1) {
     display: none;
   }
 }
 
 a.sidebar-item {
   overflow: hidden;
+
   white-space: nowrap;
   text-decoration: none;
   text-overflow: ellipsis;
@@ -340,12 +351,14 @@ code {
   .prev,
   .next {
     font-size: 0;
-    display: block;
-    word-break: keep-all;
 
+    display: block;
+
+    word-break: keep-all;
     a {
       font-size: 20px;
       font-weight: 600;
+
       color: var(--c-text-lightest);
       &::before,
       &::after {
@@ -357,6 +370,7 @@ code {
   .prev a {
     &::before {
       content: "\e7a0";
+
       color: var(--c-text-lightest);
     }
   }
@@ -364,6 +378,7 @@ code {
   .next a {
     &::after {
       content: "\e7a1";
+
       color: var(--c-text-light);
     }
   }
@@ -382,6 +397,7 @@ code {
   .code-group__nav {
     margin-right: 0rem;
     margin-left: 0rem;
+
     border-radius: 6px;
   }
 }
