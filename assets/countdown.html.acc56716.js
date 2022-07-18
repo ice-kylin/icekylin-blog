@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-dd360164","path":"/study/fp/countdown.html","title":"Countdown Problem","lang":"zh-CN","frontmatter":{},"excerpt":"","headers":[],"git":{"updatedTime":1657825288000,"contributors":[{"name":"ice-kylin","email":"wminid@yeah.net","commits":1}]},"filePathRelative":"study/fp/countdown.md"}');export{t as data};

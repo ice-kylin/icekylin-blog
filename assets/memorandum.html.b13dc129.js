@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-5e40521c","path":"/life/daily/memorandum.html","title":"\u5907\u5FD8\u5F55","lang":"zh-CN","frontmatter":{},"excerpt":"","headers":[],"git":{"updatedTime":1658167011000,"contributors":[{"name":"ice-kylin","email":"wminid@yeah.net","commits":1}]},"filePathRelative":"life/daily/memorandum.md"}');export{e as data};
