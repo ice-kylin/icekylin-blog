@@ -1,1 +1,0 @@
-import{_ as t,o as a,c as _,b as e,d as r}from"./app.8d965003.js";const c={},i=e("h1",{id:"_5-\u6709\u9650\u57DF",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#_5-\u6709\u9650\u57DF","aria-hidden":"true"},"#"),r(" 5. \u6709\u9650\u57DF")],-1),n=[i];function o(s,d){return a(),_("div",null,n)}var f=t(c,[["render",o],["__file","5-finite_field.html.vue"]]);export{f as default};
