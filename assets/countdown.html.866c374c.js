@@ -1,0 +1,1 @@
+import{_ as o,o as t,c as n,b as e,d as c}from"./app.a2d5790b.js";const r={},a=e("h1",{id:"countdown-problem",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#countdown-problem","aria-hidden":"true"},"#"),c(" Countdown Problem")],-1),d=[a];function s(_,l){return t(),n("div",null,d)}var u=o(r,[["render",s],["__file","countdown.html.vue"]]);export{u as default};
