@@ -1,1 +1,0 @@
-import{_ as t,o as a,c,b as e,d as r}from"./app.a2d5790b.js";const n={},o=e("h1",{id:"\u51B0\u306E\u53A8\u623F",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#\u51B0\u306E\u53A8\u623F","aria-hidden":"true"},"#"),r(" \u51B0\u306E\u53A8\u623F")],-1),s=[o];function _(d,i){return a(),c("div",null,s)}var l=t(n,[["render",_],["__file","kitchen.html.vue"]]);export{l as default};
