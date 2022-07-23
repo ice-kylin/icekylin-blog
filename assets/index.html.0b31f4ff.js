@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-2e480632","path":"/study/math/linear-algebra/","title":"\u7EBF\u6027\u4EE3\u6570","lang":"zh-CN","frontmatter":{},"excerpt":"","headers":[],"git":{"updatedTime":1658593668000,"contributors":[{"name":"ice-kylin","email":"wminid@yeah.net","commits":1}]},"filePathRelative":"study/math/linear-algebra/README.md"}');export{e as data};
