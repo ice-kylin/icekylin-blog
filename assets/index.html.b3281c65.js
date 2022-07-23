@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-aa49a9e0","path":"/life/daily/","title":"\u60A0\u7136\u89C1\u5357\u5C71","lang":"zh-CN","frontmatter":{},"excerpt":"","headers":[],"git":{"updatedTime":1658593668000,"contributors":[{"name":"ice-kylin","email":"wminid@yeah.net","commits":1}]},"filePathRelative":"life/daily/README.md"}');export{e as data};

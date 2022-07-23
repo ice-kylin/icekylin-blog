@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-2e07445c","path":"/study/latex/","title":"\u6392\u7248\u7CFB\u7EDF","lang":"zh-CN","frontmatter":{},"excerpt":"","headers":[],"git":{"updatedTime":1658593668000,"contributors":[{"name":"ice-kylin","email":"wminid@yeah.net","commits":1}]},"filePathRelative":"study/latex/README.md"}');export{e as data};

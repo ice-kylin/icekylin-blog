@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-5f8e6a3a","path":"/study/latex/latex.html","title":"LaTeX","lang":"zh-CN","frontmatter":{},"excerpt":"","headers":[],"git":{"updatedTime":1658593668000,"contributors":[{"name":"ice-kylin","email":"wminid@yeah.net","commits":2}]},"filePathRelative":"study/latex/latex.md"}');export{e as data};
