@@ -107,6 +107,7 @@ export default defineUserConfig({
                 "/study/math/linear-algebra/1-geometric-interpretation.md",
                 "/study/math/linear-algebra/2-matrix-elimination.md",
                 "/study/math/linear-algebra/3-matrix-mul.md",
+                "/study/math/linear-algebra/4-factorization.md",
               ],
             },
           ],

@@ -202,11 +202,13 @@ html {
         z-index: 1;
 
         border-radius: 2rem;
+
         &.primary {
           color: #fff;
           border: none;
           background-color: #ed6ea0;
           background-image: linear-gradient(to right, #ed6ea0 0%, #ec8c69 100%);
+
           &:hover {
             &::after {
               position: absolute;
@@ -246,6 +248,7 @@ html {
   .navbar {
     border-bottom: none;
     background-color: transparent;
+
     &::before {
       position: absolute;
       z-index: -2;
