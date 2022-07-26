@@ -85,7 +85,7 @@ $$
 
 一个行图像显示一个方程。行图像遵从解析几何的描述，每个方程在平面坐标系上的图像为一条直线。
 
-![2d-row-pic](./geometric-interpretation/2d-row-pic.svg)
+![2d-row-pic](./1-geometric-interpretation/2d-row-pic.svg)
 
 $$
 \begin{aligned}
@@ -181,7 +181,7 @@ $$
 
 由于现在有三个未知数，故图像在三维坐标系中。每个方程在三维空间中实际上是一个平面。
 
-![3d-row-pic](./geometric-interpretation/3d-row-pic.png)
+![3d-row-pic](./1-geometric-interpretation/3d-row-pic.png)
 
 $$
 \begin{aligned}

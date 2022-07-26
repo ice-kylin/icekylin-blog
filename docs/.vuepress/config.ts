@@ -104,9 +104,9 @@ export default defineUserConfig({
               text: "线性代数",
               link: "/study/math/linear-algebra/README.md",
               children: [
-                "/study/math/linear-algebra/geometric-interpretation.md",
-                "/study/math/linear-algebra/matrix-elimination.md",
-                "/study/math/linear-algebra/matrix-mul.md",
+                "/study/math/linear-algebra/1-geometric-interpretation.md",
+                "/study/math/linear-algebra/2-matrix-elimination.md",
+                "/study/math/linear-algebra/3-matrix-mul.md",
               ],
             },
           ],
