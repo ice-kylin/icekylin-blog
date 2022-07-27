@@ -134,3 +134,169 @@ $$
 消元的目的只是为了认识矩阵的概念，而 $A = LU$ 是最基础的矩阵分解。
 
 在之前的小节中已经介绍了如何应用消元法将矩阵 $A$ 转变为上三角矩阵 $U$，这就引出了矩阵的 $LU$ 分解，它是理解矩阵 $A$ 性质的重要方法。
+
+下面的例子都假设没有行交换的情况。矩阵 $A$ 通过一系列的左乘消元矩阵 $E_{ij}$ 最终转化为 $U$。
+
+### 二阶矩阵
+
+在二阶矩阵中，只需要一次消元操作（左乘 $E_{21}$）即可，例如：
+
+$$
+E_{21}A = \begin{bmatrix}
+  1 & 0 \\
+  -4 & 1
+\end{bmatrix} \begin{bmatrix}
+  \textcolor{red}{2} & 1 \\
+  \textcolor{blue}{8} & 7
+\end{bmatrix} = \begin{bmatrix}
+  \textcolor{red}{2} & 1 \\
+  \textcolor{green}{0} & \textcolor{red}{3}
+\end{bmatrix} = U
+$$
+
+在之前的小节中，已经介绍了消元矩阵的逆实际上非常容易看出来，只需要将对应位置的正负号改变即可。则等式两边同时左乘 $E_{21}^{-1}$，可得：
+
+$$
+\begin{aligned}
+  E_{21}^{-1}E_{21}A & = E_{21}^{-1}U \\
+  A & = E_{21}^{-1}U
+\end{aligned}
+$$
+
+也就是说 $L$ 即为 $E_{21}$ 的逆 $E_{21}^{-1}$：
+
+$$
+E_{21}^{-1} = L
+$$
+
+例如：
+
+$$
+A = E_{21}^{-1}E_{21}A = \begin{bmatrix}
+  1 & 0 \\
+  \textcolor{orange}{4} & 1
+\end{bmatrix} \begin{bmatrix}
+  1 & 0 \\
+  \textcolor{orange}{-4} & 1
+\end{bmatrix} \begin{bmatrix}
+  \textcolor{red}{2} & 1 \\
+  \textcolor{blue}{8} & 7
+\end{bmatrix} = \begin{bmatrix}
+  1 & 0 \\
+  \textcolor{orange}{-4} & 1
+\end{bmatrix} \begin{bmatrix}
+  \textcolor{red}{2} & 1 \\
+  \textcolor{green}{0} & \textcolor{red}{3}
+\end{bmatrix} = E_{21}^{-1}U = LU
+$$
+
+其中，在之前的小节中提到过 $U$ 代表上三角矩阵（**u**pper triangular matrix），而此处的 $L$ 则代表下三角矩阵（**l**ower triangular matrix）。上三角矩阵的对角线左下方的系数全部为 $0$，下三角矩阵的对角线右上方的系数全部为 $0$。
+
+有时还会将 $U$ 的主元单独列出来，从而进一步分解得到对角矩阵 $D$（**d**iagonal matrix），使得看起来更有“平衡感”：
+
+$$
+A = LDU
+$$
+
+例如：
+
+$$
+A = \begin{bmatrix}
+  2 & 1 \\
+  8 & 7
+\end{bmatrix} = \begin{bmatrix}
+  1 & \textcolor{blue}{0} \\
+  \textcolor{blue}{-4} & 1
+\end{bmatrix} \begin{bmatrix}
+  \textcolor{red}{2} & 0 \\
+  0 & \textcolor{red}{3}
+\end{bmatrix} \begin{bmatrix}
+  1 & \textcolor{blue}{1 / 2} \\
+  \textcolor{blue}{0} & 1
+\end{bmatrix} = LDU
+$$
+
+### 三阶矩阵
+
+下面讨论更高阶的矩阵。在之前的二阶矩阵中 $L$ 只是简单的将 $E_{21}$ 中对应位置的符号改了一下，但对于更高阶的矩阵 $E$ 和 $L$ 的区别将大很多。
+
+同样假设没有行互换，那么对于三阶矩阵来说：
+
+$$
+E_{32} \left( E_{31} \left( E_{21}A \right) \right) = \left( E_{32}E_{31}E_{21} \right) A = U
+$$
+
+同时左乘逆矩阵得到：
+
+$$
+A = E_{21}^{-1} \left( E_{31}^{-1} \left( E_{32}^{-1}U \right) \right) = \left( E_{21}^{-1}E_{31}^{-1}E_{32}^{-1} \right) U = LU
+$$
+
+::: tip 💡 tip
+
+也可以根据矩阵乘积的逆公式直接得到。
+
+:::
+
+也就是：
+
+$$
+\begin{aligned}
+  \textcolor{red}{\left( E_{32}E_{31}E_{21} \right)} A & = U \\
+  A & = \textcolor{blue}{\left( E_{21}^{-1}E_{31}^{-1}E_{32}^{-1} \right)} U
+\end{aligned}
+$$
+
+这时可能有人会有疑问 —— 为什么要用逆的形式呢？因为在实践中，逆的形式的积（如 $\textcolor{blue}{E_{21}^{-1}E_{31}^{-1}E_{32}^{-1}}$）要比上面的积（如 $\textcolor{red}{E_{32}E_{31}E_{21}}$）要好。
+
+举一个典型的例子，假设有一组三元矩阵的消元矩阵（其中 $E_{31} = I$），则：
+
+$$
+E_{32}E_{31} = \begin{bmatrix}
+  1 & 0 & 0 \\
+  0 & 1 & 0 \\
+  0 & -5 & 1
+\end{bmatrix} \begin{bmatrix}
+  1 & 0 & 0 \\
+  -2 & 1 & 0 \\
+  0 & 0 & 1
+\end{bmatrix} = \begin{bmatrix}
+  1 & 0 & 0 \\
+  \textcolor{blue}{-2} & 1 & 0 \\
+  \textcolor{red}{10} & \textcolor{blue}{-5} & 1
+\end{bmatrix} = E
+$$
+
+可以观察到 —— 矩阵的对角线上都是 $1$，而上面都是 $0$。需要注意的是在 $\left( 3, 1 \right)$ 位置出现了 $\textcolor{red}{10}$。得到该数的原因是在 $E_{21}$ 中从行二减去了 $2$ 倍行一得到新行二，而在 $E_{32}$ 中实际上是从行三中减去了 $5$ 倍新行二，相当于减去了 $5$ 倍的原行二并减去了 $5 \times -2 = \textcolor{red}{-10}$ 倍的新行一，因此总共在行三中加上了 $\textcolor{red}{10}$ 倍的行一：
+
+$$
+\begin{aligned}
+  & row_{3} - 5row_{2}' \\
+  & = row_{3} - 5 \left( row_{2} - 2row_{1} \right) \\
+  & = row_{3} - 5row_{2} + 10row_{1}
+\end{aligned}
+$$
+
+现在计算其逆：
+
+$$
+E_{31}^{-1}E_{32}^{-1} = \begin{bmatrix}
+  1 & 0 & 0 \\
+  0 & 1 & 0 \\
+  0 & 5 & 1
+\end{bmatrix} \begin{bmatrix}
+  1 & 0 & 0 \\
+  2 & 1 & 0 \\
+  0 & 0 & 1
+\end{bmatrix} = \begin{bmatrix}
+  1 & 0 & 0 \\
+  \textcolor{blue}{2} & 1 & 0 \\
+  \textcolor{green}{0} & \textcolor{blue}{5} & 1
+\end{bmatrix} = L
+$$
+
+可以发现，这时就没有出现上面前行影响后行的情况发生，这是因为运算顺序发生了变化。
+
+故若没有行交换的情况，则消元乘数可以直接写入 $L$ 中而不需要任何运算。
+
+也就是说可以在得到 $LU$ 的过程中把 $A$ 抛开（在之前的高斯消元中实际上也是这样做的），只需记住消元乘数和得到的 $U$ 对应的行，因为 $A$ 中的信息都包含于 $LU$。这是我们对于消元的全新认识。
