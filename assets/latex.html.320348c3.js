@@ -1,1 +1,0 @@
-import{_ as a,o as t,c as r,a as e,b as c}from"./app.295ee142.js";const o={},s=e("h1",{id:"latex",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#latex","aria-hidden":"true"},"#"),c(" LaTeX")],-1),_=[s];function n(l,d){return t(),r("div",null,_)}var h=a(o,[["render",n],["__file","latex.html.vue"]]);export{h as default};
