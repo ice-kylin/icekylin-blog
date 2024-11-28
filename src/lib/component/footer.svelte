@@ -1,11 +1,11 @@
 <script lang="ts">
 	import Bento from '$lib/emoji/bento-high-contrast.svelte';
 	import FooterIcon from '$lib/icon/footer-icon.svelte';
-	import youtube from '@mdi/svg/svg/youtube.svg?raw';
-	import twitter from '@mdi/svg/svg/twitter.svg?raw';
-	import { Icon } from 'svelte-icon';
+	import Note from '$lib/component/footer/note.svelte';
+	import Social from '$lib/component/footer/social.svelte';
+	import Statistic from '$lib/component/footer/statistic.svelte';
+	import Friends from '$lib/component/footer/friends.svelte';
 	import { footerHeightState } from '$lib/state.svelte.js';
-	import { FRIENDS, SOCIAL, X, YOUTUBE } from '../../config';
 </script>
 
 <footer
@@ -22,51 +22,10 @@
 			<a class="w-full pr-2.5 transition-transform hover:-rotate-3 md:w-fit" href="/">
 				<Bento />
 			</a>
-			<div class="flex w-36 flex-col flex-wrap gap-2">
-				<p class="pb-2">NOTE</p>
-				<p class="text-pretty font-art font-normal">
-					Code licensed under GPLv3, articles under CC BY-SA 4.0. Design by icekylin, inspired by
-					<a class="underline" href="https://arc.net/blog">arc.net/blog</a> and created with love by
-					icekylin. Powered by <a class="underline" href="https://svelte.dev/">SvelteKit</a>
-					& <a class="underline" href="https://pocketbase.io/">PocketBase</a>.
-				</p>
-			</div>
-			<div class="flex w-full flex-col gap-2 sm:w-fit">
-				<p class="pb-2">SOCIAL</p>
-				{#each SOCIAL as social}
-					<a
-						target="_blank"
-						class="decoration-wavy underline-offset-4 hover:underline"
-						href={social.url}>{social.name}</a
-					>
-				{/each}
-			</div>
-			<div class="flex w-full flex-col gap-2 sm:w-fit">
-				<p class="pb-2">STATISTIC</p>
-				<p><span class="font-art">xxx</span> 位访客</p>
-				<p><span class="font-art">xxx</span> 次浏览</p>
-				<p>更多...</p>
-			</div>
-			<div class="flex w-full flex-col gap-2 sm:w-fit">
-				<p class="pb-2">FRIENDS</p>
-				{#each FRIENDS as friend}
-					<a
-						target="_blank"
-						class="decoration-wavy underline-offset-4 hover:underline"
-						href={friend.url}>{friend.name}</a
-					>
-				{/each}
-				<p>更多...</p>
-				<div class="h-full"></div>
-				<div class="flex gap-3">
-					<a class="hover:text-surfaceContainerHigh" href={YOUTUBE} target="_blank">
-						<Icon data={youtube} size="24px" stroke="transparent" />
-					</a>
-					<a class="hover:text-surfaceContainerHigh" href={X} target="_blank">
-						<Icon data={twitter} size="24px" stroke="transparent" />
-					</a>
-				</div>
-			</div>
+			<Note />
+			<Social />
+			<Statistic />
+			<Friends />
 			<div class="absolute bottom-9 right-9">
 				<FooterIcon />
 			</div>
