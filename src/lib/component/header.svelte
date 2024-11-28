@@ -1,0 +1,10 @@
+<nav>
+	<ul>
+		<li>主页</li>
+		<li>分类</li>
+		<li>标签</li>
+		<li>归档</li>
+		<li>关于</li>
+		<li>友链</li>
+	</ul>
+</nav>
