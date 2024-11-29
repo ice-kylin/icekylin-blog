@@ -10,19 +10,11 @@ const sans: string[] = [
 const art: string[] = ['Tiny5'];
 
 export default {
+	darkMode: ['selector', '[data-theme="dark"]'],
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
 		extend: {
-			boxShadow: {
-				1: ['0 1px 2px rgba(0, 0, 0, 0.3)', '0 1px 3px 1px rgba(0, 0, 0, 0.15)'],
-				2: ['0 1px 2px rgba(0, 0, 0, 0.3)', '0 2px 3px 1px rgba(0, 0, 0, 0.15)'],
-				3: ['0 1px 3px rgba(0, 0, 0, 0.3)', '0 4px 8px 3px rgba(0, 0, 0, 0.15)'],
-				4: ['0 2px 3px rgba(0, 0, 0, 0.3)', '0 6px 10px 4px rgba(0, 0, 0, 0.15)'],
-				5: ['0 4px 4px rgba(0, 0, 0, 0.3)', '0 8px 12px 6px rgba(0, 0, 0, 0.15)']
-			},
 			colors: {
-				main: 'rgb(var(--main) / <alpha-value>)',
-				current: 'rgb(var(--current) / <alpha-value>)',
 				primary: 'rgb(var(--md-sys-color-primary) / <alpha-value>)',
 				onPrimary: 'rgb(var(--md-sys-color-on-primary) / <alpha-value>)',
 				primaryContainer: 'rgb(var(--md-sys-color-primary-container) / <alpha-value>)',
@@ -74,8 +66,7 @@ export default {
 				surfaceContainerLow: 'rgb(var(--md-sys-color-surface-container-low) / <alpha-value>)',
 				surfaceContainerLowest: 'rgb(var(--md-sys-color-surface-container-lowest) / <alpha-value>)',
 				surfaceBright: 'rgb(var(--md-sys-color-surface-bright) / <alpha-value>)',
-				surfaceDim: 'rgb(var(--md-sys-color-surface-dim) / <alpha-value>)',
-				wb: 'rgb(var(--wb) / <alpha-value>)'
+				surfaceDim: 'rgb(var(--md-sys-color-surface-dim) / <alpha-value>)'
 			},
 			fontFamily: {
 				sans,

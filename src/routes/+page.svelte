@@ -4,8 +4,7 @@
 	import { footerHeightState } from '$lib/state.svelte';
 </script>
 
-<div class="relative min-h-screen">
-	<Header />
-	<div style="height: {footerHeightState.height}px;"></div>
-	<Footer />
-</div>
+<Header />
+<div class="h-20"></div>
+<div style="height: {footerHeightState.height}px;"></div>
+<Footer />

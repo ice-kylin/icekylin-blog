@@ -11,7 +11,6 @@
     /* theme */
     :root,
     html[data-theme='light'] {
-        --main: 9 105 218;
         --md-sys-color-primary: 67 94 145;
         --md-sys-color-surface-tint: 67 94 145;
         --md-sys-color-on-primary: 255 255 255;
@@ -29,7 +28,7 @@
         --md-sys-color-on-error: 255 255 255;
         --md-sys-color-error-container: 255 218 214;
         --md-sys-color-on-error-container: 65 0 2;
-        --md-sys-color-background: 249 249 255;
+        --md-sys-color-background: 255 255 255;
         --md-sys-color-on-background: 26 27 32;
         --md-sys-color-surface: 249 249 255;
         --md-sys-color-on-surface: 26 27 32;
@@ -49,11 +48,9 @@
         --md-sys-color-surface-container: 237 237 244;
         --md-sys-color-surface-container-high: 232 231 238;
         --md-sys-color-surface-container-highest: 226 226 233;
-        --wb: 255 255 255;
     }
 
     html[data-theme='dark'] {
-        --main: var(--md-sys-color-primary);
         --md-sys-color-primary: 173 198 255;
         --md-sys-color-surface-tint: 173 198 255;
         --md-sys-color-on-primary: 16 47 96;
@@ -71,7 +68,7 @@
         --md-sys-color-on-error: 105 0 5;
         --md-sys-color-error-container: 147 0 10;
         --md-sys-color-on-error-container: 255 218 214;
-        --md-sys-color-background: 17 19 24;
+        --md-sys-color-background: 0 0 0;
         --md-sys-color-on-background: 226 226 233;
         --md-sys-color-surface: 17 19 24;
         --md-sys-color-on-surface: 226 226 233;
@@ -91,7 +88,6 @@
         --md-sys-color-surface-container: 30 31 37;
         --md-sys-color-surface-container-high: 40 42 47;
         --md-sys-color-surface-container-highest: 51 53 58;
-        --wb: 0 0 0;
     }
 
     html {

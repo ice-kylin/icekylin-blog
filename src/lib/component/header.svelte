@@ -1,17 +1,21 @@
 <script lang="ts">
-	import Bento from '$lib/emoji/bento.svelte';
 	import Nav from './header/nav.svelte';
-	import Coffee from './header/coffee.svelte';
+	import Bento from '$lib/emoji/bento.svelte';
+	import DarkMode from './header/dark-mode.svelte';
 </script>
 
 <header
-	class="after:block after:h-10 after:w-full after:bg-[url('/svg/wave-light.svg')] after:bg-repeat-x"
+	class="fixed left-0 right-0 top-0 z-50 bg-background after:absolute after:-bottom-10 after:left-0 after:right-0 after:h-10 after:bg-[url('/svg/wave-light.svg')] after:bg-repeat-x dark:after:bg-[url('/svg/wave-dark.svg')]"
 >
-	<nav class="mx-auto flex max-w-[1344px] items-center gap-8 px-8 py-8">
-		<a href="/" class="relative -top-0.5 transition-transform hover:-rotate-3">
+	<nav
+		class="mx-auto flex max-w-[1344px] items-center justify-center gap-8 px-8 pb-5 pt-6 sm:justify-start"
+	>
+		<a class="relative -top-1 transition-transform hover:-rotate-3" href="/">
 			<Bento />
 		</a>
 		<Nav />
-		<Coffee />
+		<div class="ml-auto hidden sm:block">
+			<DarkMode />
+		</div>
 	</nav>
 </header>

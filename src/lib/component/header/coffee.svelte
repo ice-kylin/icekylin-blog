@@ -4,10 +4,10 @@
 </script>
 
 <a
-	href={COFFEE}
-	target="_blank"
 	aria-label="Buy Me a Coffee"
 	class="ml-auto h-[34px] transition-transform hover:scale-105"
+	href={COFFEE}
+	target="_blank"
 >
-	<enhanced:img src={coffee} alt="Buy Me a Coffee" width="49" height="34" />
+	<enhanced:img alt="Buy Me a Coffee" height="34" src={coffee} width="49" />
 </a>
