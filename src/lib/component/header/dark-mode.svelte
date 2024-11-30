@@ -37,7 +37,7 @@
 	}
 </script>
 
-<div class="flex gap-1 rounded-full bg-surfaceContainer p-1">
+<div class="flex gap-1 rounded-full bg-surfaceContainerLow p-1">
 	{#each MODES as { name, icon, mode }}
 		<button
 			class={clsx(

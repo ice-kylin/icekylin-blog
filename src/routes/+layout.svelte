@@ -1,14 +1,19 @@
 <script lang="ts">
 	import '../app.css';
+	import '@fontsource-variable/inter';
 	import '@fontsource-variable/noto-sans';
 	import '@fontsource-variable/noto-sans-sc';
 	import '@fontsource/tiny5';
-	import { darkModeState } from '$lib/state.svelte';
+	import Footer from '$lib/component/footer.svelte';
+	import Header from '$lib/component/header.svelte';
+	import { page } from '$app/stores';
+	import { darkModeState, footerHeightState } from '$lib/state.svelte';
 	import { onMount } from 'svelte';
 	import { getInitDarkMode, handleChange, modifyDataTheme } from '../tool/dark-mode';
 
 	let { children } = $props();
 	let mediaQuery: MediaQueryList;
+	let isErrorPage = $derived($page.status >= 400);
 
 	onMount(() => {
 		darkModeState.mode = getInitDarkMode();
@@ -18,4 +23,12 @@
 	});
 </script>
 
+{#if !isErrorPage}
+	<Header />
+	<div class="h-20"></div>
+{/if}
 {@render children()}
+{#if !isErrorPage}
+	<div style="height: {footerHeightState.height}px;"></div>
+	<Footer />
+{/if}

@@ -12,7 +12,7 @@
 	];
 </script>
 
-<ul class="hidden items-center gap-6 text-sm font-bold text-onSurfaceVariant sm:flex">
+<ul class="hidden items-center gap-8 text-sm font-bold text-onSurfaceVariant sm:flex">
 	{#each LINKS as { name, href }}
 		<li>
 			<a

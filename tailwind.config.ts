@@ -3,8 +3,9 @@ import type { Config } from 'tailwindcss';
 import defaultTheme from 'tailwindcss/defaultTheme';
 
 const sans: string[] = [
-	...defaultTheme.fontFamily.sans,
+	'Inter Variable',
 	'Noto Sans SC Variable',
+	...defaultTheme.fontFamily.sans,
 	'Noto Sans Variable'
 ];
 const art: string[] = ['Tiny5'];
