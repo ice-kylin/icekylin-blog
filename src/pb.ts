@@ -1,3 +1,5 @@
 import PocketBase from 'pocketbase';
 
-export const PB = new PocketBase('http://127.0.0.1:8090');
+export const PB = new PocketBase(
+	import.meta.env.SSR ? import.meta.env.VITE_API_SERVER : import.meta.env.VITE_API_CLIENT
+);

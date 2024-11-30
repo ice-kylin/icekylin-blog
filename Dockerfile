@@ -11,6 +11,8 @@ FROM base AS prod
 COPY . /app
 
 RUN cd /app && pnpm i && \
+    echo "VITE_API_SERVER=http://host.docker.internal:8090" > /app/.env \
+    echo "VITE_API_CLIENT=https://api.icekylin.online" >> /app/.env \
     pnpm build
 
 FROM base
