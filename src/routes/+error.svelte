@@ -4,6 +4,7 @@
 	import arrowRight from '@mdi/svg/svg/arrow-right.svg?raw';
 	import { page } from '$app/stores';
 	import { Icon } from 'svelte-icon';
+	import { DESCRIPTION, TITLE } from '../config';
 </script>
 
 <div
@@ -30,3 +31,8 @@
 		</a>
 	</div>
 </div>
+
+<svelte:head>
+	<title>{`${TITLE} | ${$page.status}`}</title>
+	<meta name="description" content={DESCRIPTION} />
+</svelte:head>

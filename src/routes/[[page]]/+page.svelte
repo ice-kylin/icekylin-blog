@@ -4,6 +4,7 @@
 	import NoMoreContent from '$lib/component/no-more-content.svelte';
 	import { Icon } from 'svelte-icon';
 	import type { PageData } from './$types';
+	import { DESCRIPTION, TITLE } from '../../config';
 
 	let { data }: { data: PageData } = $props();
 </script>
@@ -12,17 +13,15 @@
 	<ul class="mx-auto flex max-w-screen-xl flex-col gap-20 px-6 font-bold">
 		{#each data.items as item}
 			<li>
-				<div class="flex flex-col items-center gap-2 text-center">
+				<div class="text-center">
 					<a
 						href={`/category/${item.category}`}
 						class="w-fit text-xs font-bold uppercase tracking-widest text-onSurfaceVariant"
 					>
 						{item.category}
 					</a>
-					<a href={`/post/${item.slug}`}>
-						<h1 class="text-[28px]">{item.title}</h1>
-					</a>
-					<p class="text-onSurfaceVariant">{item.description}</p>
+					<h1 class="text-pretty text-[28px]"><a href={`/post/${item.slug}`}>{item.title}</a></h1>
+					<p class="text-pretty text-onSurfaceVariant">{item.description}</p>
 					<p class="font-art text-xs font-normal text-onSurfaceVariant">
 						{item.created.replaceAll('-', '/')}
 					</p>
@@ -57,6 +56,11 @@
 		{/if}
 	{/if}
 </div>
+
+<svelte:head>
+	<title>{TITLE}</title>
+	<meta name="description" content={DESCRIPTION} />
+</svelte:head>
 
 <style>
 	.img-wrapper:hover::after {

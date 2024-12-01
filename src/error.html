@@ -4,11 +4,9 @@
 		<meta charset="utf-8" />
 		<link href="%sveltekit.assets%/favicon.png" rel="icon" />
 		<meta content="width=device-width, initial-scale=1" name="viewport" />
+		%sveltekit.head%
 	</head>
-	<body
-		class="relative min-h-screen bg-background text-onSurface"
-		data-sveltekit-preload-data="hover"
-	>
-		<div style="display: contents"></div>
+	<body class="relative bg-background text-onSurface" data-sveltekit-preload-data="hover">
+		<div style="display: contents">%sveltekit.body%</div>
 	</body>
 </html>

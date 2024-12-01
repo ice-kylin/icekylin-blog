@@ -1,3 +1,5 @@
+export const TITLE = 'Blog – icekylin';
+export const DESCRIPTION = 'icekylin 的博客';
 export const SOCIAL: {
 	name: string;
 	href: string;
