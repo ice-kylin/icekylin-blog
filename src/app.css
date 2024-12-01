@@ -109,12 +109,10 @@
 	/**:not(body)::-webkit-scrollbar {*/
 	/*    display: none;*/
 	/*}*/
-
 	/**:not(html) {*/
 	/*    -ms-overflow-style: none;*/
 	/*    scrollbar-width: none;*/
 	/*}*/
-
 	/* cursor */
 	/**
     * {

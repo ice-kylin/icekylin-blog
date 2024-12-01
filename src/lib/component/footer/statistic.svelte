@@ -1,11 +1,14 @@
 <script lang="ts">
 	import { siteStartDaysState } from '$lib/state.svelte';
+	import { UMAMI } from '../../../config';
 </script>
 
 <div class="flex w-full flex-col gap-2 sm:w-fit">
 	<p class="pb-2">STATISTIC</p>
-	<p>本站已稳定运行 <span class="font-art">{siteStartDaysState.siteStartDays}</span> 天</p>
-	<p><span class="font-art">xxx</span> 位访客</p>
-	<p><span class="font-art">xxx</span> 次浏览</p>
-	<p>更多...</p>
+	<p>本站已稳定运行 {siteStartDaysState.siteStartDays} 天，真不容易</p>
+	<p>
+		<a class="decoration-wavy underline-offset-4 hover:underline" href={UMAMI} target="_blank">
+			更多...
+		</a>
+	</p>
 </div>

@@ -46,3 +46,4 @@ export const YOUTUBE = 'https://www.youtube.com/@icekylin';
 export const X = 'https://x.com/icekylin_';
 export const COFFEE = 'https://buymeacoffee.com/icekylin';
 export const MOE_ICP = { text: '萌ICP备20242049号', href: 'https://icp.gov.moe/?keyword=20242049' };
+export const UMAMI = 'https://umami.icekylin.cn/share/khr1oCYBEaT2uO3U/icekylin.online';

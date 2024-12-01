@@ -59,7 +59,7 @@
 
 <svelte:head>
 	<title>{TITLE}</title>
-	<meta name="description" content={DESCRIPTION} />
+	<meta content={DESCRIPTION} name="description" />
 </svelte:head>
 
 <style>

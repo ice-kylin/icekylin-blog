@@ -34,5 +34,5 @@
 
 <svelte:head>
 	<title>{`${TITLE} | ${$page.status}`}</title>
-	<meta name="description" content={DESCRIPTION} />
+	<meta content={DESCRIPTION} name="description" />
 </svelte:head>
