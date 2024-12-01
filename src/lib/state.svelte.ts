@@ -7,3 +7,7 @@ export const footerHeightState: {
 export const darkModeState: {
 	mode: DarkMode;
 } = $state({ mode: DarkMode.System });
+
+export const siteStartDaysState: {
+	siteStartDays: number;
+} = $state({ siteStartDays: 0 });

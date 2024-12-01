@@ -7,13 +7,15 @@
 	import Footer from '$lib/component/footer.svelte';
 	import Header from '$lib/component/header.svelte';
 	import { page } from '$app/stores';
-	import { darkModeState, footerHeightState } from '$lib/state.svelte';
-	import { onMount } from 'svelte';
+	import { darkModeState, footerHeightState, siteStartDaysState } from '$lib/state.svelte';
+	import { onMount, type Snippet } from 'svelte';
 	import { getInitDarkMode, handleChange, modifyDataTheme } from '../tool/dark-mode';
+	import type { LayoutData } from './$types';
 
-	let { children } = $props();
+	let { data, children }: { data: LayoutData; children: Snippet } = $props();
 	let mediaQuery: MediaQueryList;
 	let isErrorPage = $derived($page.status >= 400);
+	siteStartDaysState.siteStartDays = data.siteStartDays;
 
 	onMount(() => {
 		darkModeState.mode = getInitDarkMode();

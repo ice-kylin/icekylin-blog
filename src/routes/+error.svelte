@@ -19,10 +19,7 @@
 		<p class="mt-2 text-center">
 			啊呀，页面走丢了。<br />如果这是一个 Bug，欢迎告诉我！<br />
 		</p>
-		<a
-			href="/"
-			class="group mt-4 flex w-fit items-center gap-2 rounded-3xl pl-1"
-		>
+		<a class="group mt-4 flex w-fit items-center gap-2 rounded-3xl pl-1" href="/">
 			返回首页
 			<div class="relative left-0 transition-transform duration-300 group-hover:translate-x-2">
 				<Icon data={arrowRight} size="24px" stroke="transparent" />
