@@ -21,10 +21,10 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build Docker image
-        run: docker build -t icekylin-blog:latest .
+        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/icekylin-blog:latest .
 
       - name: Push Docker image
-        run: docker push icekylin-blog:latest
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/icekylin-blog:latest
 
   deploy:
     name: Deploy to Server
@@ -40,7 +40,7 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
             docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
-            docker pull icekylin-blog:latest
+            docker pull ${{ secrets.DOCKER_USERNAME }}/icekylin-blog:latest
 
             cd ${{ secrets.SERVER_WORKDIR }}
 
