@@ -43,7 +43,7 @@
 					<img
 						alt={item.title}
 						class="mx-auto aspect-video w-full max-w-[800px] transition-transform duration-700 group-hover:scale-105"
-						src={`http://127.0.0.1:8090/api/files/${item.collectionId}/${item.id}/${item.header}?thumb=800x450`}
+						src={`${import.meta.env.SSR ? import.meta.env.VITE_API_SERVER : import.meta.env.VITE_API_CLIENT}/api/files/${item.collectionId}/${item.id}/${item.header}?thumb=800x450`}
 					/>
 				</a>
 			</li>
