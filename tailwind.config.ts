@@ -8,7 +8,8 @@ const sans: string[] = [
 	...defaultTheme.fontFamily.sans,
 	'Noto Sans Variable'
 ];
-const art: string[] = ['Tiny5'];
+const mono: string[] = ['Roboto Mono Variable', ...defaultTheme.fontFamily.mono];
+const art: string[] = ['Tiny5', ...defaultTheme.fontFamily.mono];
 
 export default {
 	darkMode: ['selector', '[data-theme="dark"]'],
@@ -71,6 +72,7 @@ export default {
 			},
 			fontFamily: {
 				sans,
+				mono,
 				art
 			},
 			typography: {

@@ -11,3 +11,7 @@ export const darkModeState: {
 export const siteStartDaysState: {
 	siteStartDays: number;
 } = $state({ siteStartDays: 0 });
+
+export const isAtTopState: {
+	isAtTop: boolean;
+} = $state({ isAtTop: true });

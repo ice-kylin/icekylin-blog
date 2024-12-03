@@ -7,7 +7,7 @@ settings:
 importers:
 
   .:
-    dependencies:
+    devDependencies:
       '@fontsource-variable/inter':
         specifier: ^5.1.0
         version: 5.1.0
@@ -17,22 +17,15 @@ importers:
       '@fontsource-variable/noto-sans-sc':
         specifier: ^5.1.0
         version: 5.1.0
+      '@fontsource-variable/roboto-mono':
+        specifier: ^5.1.0
+        version: 5.1.0
       '@fontsource/tiny5':
         specifier: ^5.1.0
         version: 5.1.0
       '@mdi/svg':
         specifier: ^7.4.47
         version: 7.4.47
-      '@tailwindcss/typography':
-        specifier: ^0.5.15
-        version: 0.5.15(tailwindcss@3.4.15)
-      clsx:
-        specifier: ^2.1.1
-        version: 2.1.1
-      pocketbase:
-        specifier: ^0.22.0
-        version: 0.22.0
-    devDependencies:
       '@sveltejs/adapter-auto':
         specifier: ^3.0.0
         version: 3.3.1(@sveltejs/kit@2.8.5(@sveltejs/vite-plugin-svelte@4.0.2(svelte@5.2.9)(vite@5.4.11))(svelte@5.2.9)(vite@5.4.11))
@@ -48,9 +41,15 @@ importers:
       '@sveltejs/vite-plugin-svelte':
         specifier: ^4.0.0
         version: 4.0.2(svelte@5.2.9)(vite@5.4.11)
+      '@tailwindcss/typography':
+        specifier: ^0.5.15
+        version: 0.5.15(tailwindcss@3.4.15)
       autoprefixer:
         specifier: ^10.4.20
         version: 10.4.20(postcss@8.4.49)
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
       eslint:
         specifier: ^9.7.0
         version: 9.15.0(jiti@1.21.6)
@@ -63,6 +62,9 @@ importers:
       globals:
         specifier: ^15.0.0
         version: 15.12.0
+      pocketbase:
+        specifier: ^0.22.0
+        version: 0.22.0
       prettier:
         specifier: ^3.4.1
         version: 3.4.1
@@ -290,6 +292,9 @@ packages:
 
   '@fontsource-variable/noto-sans@5.1.0':
     resolution: {integrity: sha512-mLn33cgmryVFjpHoHy/lx6/DsRvp8kbxDmfMbMNl75eY+bVubad3u6oGSCyc8izcSNZAhAlXdoFW7mCnI2l63w==}
+
+  '@fontsource-variable/roboto-mono@5.1.0':
+    resolution: {integrity: sha512-87USlDpEi7dS/ayPXwf/08vdgJKEYxdQmuZk5kCzWBtumimdwWlA9Vh36TCtYqFC+dGgDxPX/4PJK+0lxkEd5A==}
 
   '@fontsource/tiny5@5.1.0':
     resolution: {integrity: sha512-MCyU9+0RoD/M6kQAUxx3lvgxgqXT7PB2vzCQjAZjKG5tdfRRQQS1oOTx0e+w+Qu0bFLUCyPfssCk0XrugVk3HQ==}
@@ -2007,6 +2012,8 @@ snapshots:
   '@fontsource-variable/noto-sans-sc@5.1.0': {}
 
   '@fontsource-variable/noto-sans@5.1.0': {}
+
+  '@fontsource-variable/roboto-mono@5.1.0': {}
 
   '@fontsource/tiny5@5.1.0': {}
 

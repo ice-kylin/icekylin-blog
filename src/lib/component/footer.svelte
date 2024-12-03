@@ -16,9 +16,9 @@
 		<div
 			class="relative left-0 after:absolute after:-bottom-10 after:h-10 after:w-full after:bg-[url('/svg/wave.svg')] after:bg-repeat-x"
 		>
-			<p class="text-pretty px-8 py-12 text-center text-2xl">博客积极维护中。</p>
+			<p class="px-8 py-12 text-center text-2xl">博客积极维护中。</p>
 		</div>
-		<div class="flex flex-wrap gap-8 p-16 sm:p-8 md:flex-row">
+		<div class="flex flex-wrap gap-8 p-8 md:flex-row">
 			<div class="w-full pr-2.5 md:w-fit">
 				<a class="block w-fit transition-transform hover:-rotate-3" href="/">
 					<Bento />

@@ -3,6 +3,7 @@
 	import '@fontsource-variable/inter';
 	import '@fontsource-variable/noto-sans';
 	import '@fontsource-variable/noto-sans-sc';
+	import '@fontsource-variable/roboto-mono';
 	import '@fontsource/tiny5';
 	import Footer from '$lib/component/footer.svelte';
 	import Header from '$lib/component/header.svelte';

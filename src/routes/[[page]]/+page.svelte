@@ -2,35 +2,43 @@
 	import arrowRight from '@mdi/svg/svg/arrow-right.svg?raw';
 	import Pagination from '$lib/component/pagination.svelte';
 	import NoMoreContent from '$lib/component/no-more-content.svelte';
+	import { isAtTopState } from '$lib/state.svelte';
 	import { Icon } from 'svelte-icon';
 	import type { PageData } from './$types';
 	import { DESCRIPTION, TITLE } from '../../config';
+	import { onMount } from 'svelte';
 
 	let { data }: { data: PageData } = $props();
+
+	onMount(() => {
+		isAtTopState.isAtTop = window.scrollY === 0;
+	});
 </script>
 
 <div class="mb-20 mt-12">
-	<ul class="mx-auto flex max-w-screen-xl flex-col gap-20 px-6 font-bold">
+	<ul class="mx-auto flex max-w-screen-xl flex-col gap-20 px-6 font-bold text-onSurfaceVariant">
 		{#each data.items as item}
 			<li>
 				<div class="text-center">
 					<a
 						href={`/category/${item.category}`}
-						class="w-fit text-xs font-bold uppercase tracking-widest text-onSurfaceVariant"
+						class="w-fit font-mono text-xs uppercase tracking-widest"
 					>
 						{item.category}
 					</a>
-					<h1 class="text-pretty text-[28px]"><a href={`/post/${item.slug}`}>{item.title}</a></h1>
-					<p class="text-pretty text-onSurfaceVariant">{item.description}</p>
-					<p class="font-art text-xs font-normal text-onSurfaceVariant">
-						{item.created.replaceAll('-', '/')}
+					<h1 class="text-[28px] text-onSurface transition-all hover:font-extrabold">
+						<a href={`/post/${item.slug}`}>{item.title}</a>
+					</h1>
+					<p class="font-medium">{item.description}</p>
+					<p class="mt-2 font-mono text-xs font-medium">
+						{item.created}
 					</p>
 				</div>
 				<a
 					href={`/post/${item.slug}`}
 					class="group mx-auto mb-10 mt-4 flex w-fit items-center gap-2 pl-1 text-primary"
 				>
-					阅读更多
+					READ MORE
 					<div class="relative left-0 transition-transform duration-300 group-hover:translate-x-2">
 						<Icon data={arrowRight} size="24px" stroke="transparent" />
 					</div>
