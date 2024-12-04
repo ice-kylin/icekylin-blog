@@ -1,15 +1,14 @@
 import { error } from '@sveltejs/kit';
-import type { LayoutLoad } from './$types';
-import { PB } from '../pb';
+import type { LayoutServerLoad } from './$types';
 
-export const load: LayoutLoad = async () => {
+export const load: LayoutServerLoad = async ({ locals }) => {
 	let siteStartDays;
 
 	try {
 		siteStartDays = Math.ceil(
 			(new Date().getTime() -
 				new Date(
-					(await PB.collection('configs').getFirstListItem('setting_key="site_start_date"'))[
+					(await locals.pb.collection('configs').getFirstListItem('setting_key="site_start_date"'))[
 						'setting_value'
 					]
 				).getTime()) /

@@ -45,7 +45,7 @@
 				</a>
 				<a
 					href={`/post/${item.slug}`}
-					class="img-wrapper group relative mx-auto block w-fit overflow-hidden rounded after:absolute after:inset-0 after:bg-cover after:bg-no-repeat after:opacity-100 after:mix-blend-hard-light after:transition-opacity after:duration-700 after:ease-[cubic-bezier(0.16,1,0.3,1)] hover:after:bg-[url('/img/gradient-mesh.jpg')] hover:after:opacity-70"
+					class="img-wrapper group relative mx-auto block w-fit overflow-hidden after:absolute after:inset-0 after:bg-cover after:bg-no-repeat after:opacity-100 after:mix-blend-hard-light after:transition-opacity after:duration-700 after:ease-[cubic-bezier(0.16,1,0.3,1)] hover:after:bg-[url('/img/gradient-mesh.jpg')] hover:after:opacity-70"
 				>
 					<img
 						alt={item.title}

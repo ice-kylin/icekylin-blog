@@ -1,12 +1,12 @@
 import { error } from '@sveltejs/kit';
-import type { PageLoad } from './$types';
-import { PB } from '../../../pb';
+import type { PageServerLoad } from './$types';
+import { MARKED } from '../../../marked';
 
-export const load: PageLoad = async ({ params }) => {
+export const load: PageServerLoad = async ({ params, locals }) => {
 	let result;
 
 	try {
-		result = await PB.collection('post_posts').getFirstListItem(`slug="${params.slug}"`, {
+		result = await locals.pb.collection('post_posts').getFirstListItem(`slug="${params.slug}"`, {
 			expand: 'tags',
 			fields: 'content,created,header,collectionId,id,title,words,expand.tags.tag,expand.tags.slug'
 		});
@@ -14,6 +14,8 @@ export const load: PageLoad = async ({ params }) => {
 	} catch (_) {
 		error(500, "Couldn't load posts.");
 	}
+
+	result.content = await MARKED.parse(result.content);
 
 	return result;
 };

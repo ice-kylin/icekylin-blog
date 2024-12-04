@@ -4,7 +4,7 @@ import defaultTheme from 'tailwindcss/defaultTheme';
 
 const sans: string[] = [
 	'Inter Variable',
-	...defaultTheme.fontFamily.sans,
+	...defaultTheme.fontFamily.sans
 	// 'Noto Sans SC Variable',
 	// 'Noto Sans Variable'
 ];
@@ -89,15 +89,15 @@ export default {
 							'--tw-prose-bold': 'rgb(var(--md-sys-color-on-surface) / 1)',
 							'--tw-prose-counters': 'rgb(var(--md-sys-color-on-surface) / 1)',
 							'--tw-prose-bullets': 'rgb(var(--md-sys-color-on-surface) / 1)',
-							'--tw-prose-hr': 'rgb(var(--md-sys-color-on-surface) / 1)',
+							'--tw-prose-hr': 'rgb(var(--md-sys-color-outline-variant) / 1)',
 							'--tw-prose-quotes': 'rgb(var(--md-sys-color-on-surface) / 1)',
 							'--tw-prose-quote-borders': 'rgb(var(--md-sys-color-primary) / 1)',
 							'--tw-prose-captions': 'rgb(var(--md-sys-color-on-surface) / 1)',
 							'--tw-prose-code': 'rgb(var(--md-sys-color-on-surface) / 1)',
-							'--tw-prose-pre-code': 'rgb(var(--md-sys-color-on-surface) / 1)',
-							'--tw-prose-pre-bg': 'rgb(var(--md-sys-color-on-surface) / 1)',
-							'--tw-prose-th-borders': 'rgb(var(--md-sys-color-on-surface) / 1)',
-							'--tw-prose-td-borders': 'rgb(var(--md-sys-color-on-surface) / 1)'
+							// '--tw-prose-pre-code': 'rgb(var(--md-sys-color-on-surface) / 1)',
+							// '--tw-prose-pre-bg': 'rgb(var(--md-sys-color-on-surface) / 1)',
+							'--tw-prose-th-borders': 'rgb(var(--md-sys-color-outline) / 1)',
+							'--tw-prose-td-borders': 'rgb(var(--md-sys-color-outline-variant) / 1)'
 						}
 					]
 				}
