@@ -4,9 +4,9 @@ import defaultTheme from 'tailwindcss/defaultTheme';
 
 const sans: string[] = [
 	'Inter Variable',
-	'Noto Sans SC Variable',
 	...defaultTheme.fontFamily.sans,
-	'Noto Sans Variable'
+	// 'Noto Sans SC Variable',
+	// 'Noto Sans Variable'
 ];
 const mono: string[] = ['Roboto Mono Variable', ...defaultTheme.fontFamily.mono];
 const art: string[] = ['Tiny5', ...defaultTheme.fontFamily.mono];

@@ -5,7 +5,7 @@
 	import { isAtTopState } from '$lib/state.svelte';
 	import { Icon } from 'svelte-icon';
 	import type { PageData } from './$types';
-	import { DESCRIPTION, TITLE } from '../../config';
+	import { TITLE } from '../../config';
 	import { onMount } from 'svelte';
 
 	let { data }: { data: PageData } = $props();
@@ -67,7 +67,6 @@
 
 <svelte:head>
 	<title>{TITLE}</title>
-	<meta content={DESCRIPTION} name="description" />
 </svelte:head>
 
 <style>

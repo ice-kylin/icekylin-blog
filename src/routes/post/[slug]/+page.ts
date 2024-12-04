@@ -8,7 +8,7 @@ export const load: PageLoad = async ({ params }) => {
 	try {
 		result = await PB.collection('post_posts').getFirstListItem(`slug="${params.slug}"`, {
 			expand: 'tags',
-			fields: 'content,created,header,collectionId,id,title,words,expand.tags.tag'
+			fields: 'content,created,header,collectionId,id,title,words,expand.tags.tag,expand.tags.slug'
 		});
 		// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	} catch (_) {

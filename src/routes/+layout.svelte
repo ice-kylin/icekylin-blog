@@ -12,6 +12,7 @@
 	import { onMount, type Snippet } from 'svelte';
 	import { getInitDarkMode, handleChange, modifyDataTheme } from '../tool/dark-mode';
 	import type { LayoutData } from './$types';
+	import { DESCRIPTION } from '../config';
 
 	let { data, children }: { data: LayoutData; children: Snippet } = $props();
 	let mediaQuery: MediaQueryList;
@@ -35,3 +36,7 @@
 	<div style="height: {footerHeightState.height}px;"></div>
 	<Footer />
 {/if}
+
+<svelte:head>
+	<meta content={DESCRIPTION} name="description" />
+</svelte:head>

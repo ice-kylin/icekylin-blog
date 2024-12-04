@@ -1,4 +1,5 @@
-export const TITLE = 'Blog – icekylin';
+export const AUTHOR = 'icekylin';
+export const TITLE = `Blog – ${AUTHOR}`;
 export const DESCRIPTION = 'icekylin 的博客';
 export const SOCIAL: {
 	name: string;
