@@ -1,4 +1,5 @@
 import { Marked } from 'marked';
+import markedAlert from 'marked-alert';
 import markedShiki from 'marked-shiki';
 import { codeToHtml } from 'shiki';
 import {
@@ -12,6 +13,7 @@ import {
 } from '@shikijs/transformers';
 
 export const MARKED = new Marked().use(
+	markedAlert(),
 	markedShiki({
 		highlight(code, lang, props) {
 			return codeToHtml(code, {

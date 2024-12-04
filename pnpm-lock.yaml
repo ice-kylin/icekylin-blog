@@ -68,6 +68,9 @@ importers:
       marked:
         specifier: ^15.0.3
         version: 15.0.3
+      marked-alert:
+        specifier: ^2.1.2
+        version: 2.1.2(marked@15.0.3)
       marked-shiki:
         specifier: ^1.1.1
         version: 1.1.1(marked@15.0.3)(shiki@1.24.0)
@@ -1350,6 +1353,11 @@ packages:
 
   magic-string@0.30.14:
     resolution: {integrity: sha512-5c99P1WKTed11ZC0HMJOj6CDIue6F8ySu+bJL+85q1zBEIY8IklrJ1eiKC2NDRh3Ct3FcvmJPyQHb9erXMTJNw==}
+
+  marked-alert@2.1.2:
+    resolution: {integrity: sha512-EFNRZ08d8L/iEIPLTlQMDjvwIsj03gxWCczYTht6DCiHJIZhMk4NK5gtPY9UqAYb09eV5VGT+jD4lp396E0I+w==}
+    peerDependencies:
+      marked: '>=7.0.0'
 
   marked-shiki@1.1.1:
     resolution: {integrity: sha512-KTSMBhZM19a1m92GDvQ7NKGc8u1l80BRS2owceTYCXa+35ZPloa0p/V/eK9Ruw0T6mwX9f3IUw/zteRfNqJIaA==}
@@ -3193,6 +3201,10 @@ snapshots:
   magic-string@0.30.14:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.0
+
+  marked-alert@2.1.2(marked@15.0.3):
+    dependencies:
+      marked: 15.0.3
 
   marked-shiki@1.1.1(marked@15.0.3)(shiki@1.24.0):
     dependencies:
