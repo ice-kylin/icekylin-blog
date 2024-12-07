@@ -1,0 +1,15 @@
+[data-footnote-ref]::before {
+	content: '[';
+}
+
+[data-footnote-ref]::after {
+	content: ']';
+}
+
+[data-footnote-ref] {
+	@apply font-mono !text-primary !no-underline;
+}
+
+[data-footnote-backref] {
+	@apply font-mono !text-primary !no-underline;
+}

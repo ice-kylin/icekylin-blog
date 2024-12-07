@@ -3,6 +3,9 @@
 	import twitter from '@mdi/svg/svg/twitter.svg?raw';
 	import share from '@mdi/svg/svg/share-variant-outline.svg?raw';
 	import arrowLeft from '@mdi/svg/svg/arrow-left.svg?raw';
+	import '../../../alert.css';
+	import '../../../katex.min.css';
+	import '../../../footnote.css';
 	import type { PageData } from './$types';
 	import { onMount } from 'svelte';
 	import { isAtTopState } from '$lib/state.svelte';
@@ -95,7 +98,7 @@
 </div>
 
 <article
-	class="prose prose-m3 mx-auto mb-12 mt-6 max-w-screen-md px-9 py-6 prose-p:leading-normal prose-pre:-mx-9 prose-pre:rounded-none md:mt-12 md:py-12 md:prose-pre:mx-0"
+	class="prose prose-m3 mx-auto mb-12 mt-6 max-w-screen-md text-wrap px-9 py-6 prose-pre:-mx-9 prose-pre:rounded-none md:mt-12 md:py-12 md:prose-pre:mx-0"
 >
 	{@html data.content}
 </article>

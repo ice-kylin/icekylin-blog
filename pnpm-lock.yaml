@@ -71,6 +71,12 @@ importers:
       marked-alert:
         specifier: ^2.1.2
         version: 2.1.2(marked@15.0.3)
+      marked-footnote:
+        specifier: ^1.2.4
+        version: 1.2.4(marked@15.0.3)
+      marked-katex-extension:
+        specifier: ^5.1.3
+        version: 5.1.3(katex@0.16.11)(marked@15.0.3)
       marked-shiki:
         specifier: ^1.1.1
         version: 1.1.1(marked@15.0.3)(shiki@1.24.0)
@@ -684,6 +690,9 @@ packages:
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
 
+  '@types/katex@0.16.7':
+    resolution: {integrity: sha512-HMwFiRujE5PjrgwHQ25+bsLJgowjGjm5Z8FVSf0N6PwgJrwxH0QxzHYDcKsTfV3wva0vzrpqMTJS2jXPr5BMEQ==}
+
   '@types/mdast@4.0.4':
     resolution: {integrity: sha512-kGaNbPh1k7AFzgpud/gMdvIm5xuECykRR+JnWKQno9TAXVa6WIVCGTPvYGekIDL4uwCZQSYbUxNBSb1aUo79oA==}
 
@@ -943,6 +952,10 @@ packages:
   commander@4.1.1:
     resolution: {integrity: sha512-NOKm8xhkzAjzFx8B2v5OAHT+u5pRQc2UCa2Vq9jYL/31o2wi9mxBA7LIFs3sV5VSC49z6pEhfbMULvShKj26WA==}
     engines: {node: '>= 6'}
+
+  commander@8.3.0:
+    resolution: {integrity: sha512-OkTL9umf+He2DZkUq8f8J9of7yL6RJKI24dVITBmNfZBmri9zYZQrKkuXiKhyfPSu8tUhnVBB1iKXevvnlR4Ww==}
+    engines: {node: '>= 12'}
 
   commondir@1.0.1:
     resolution: {integrity: sha512-W9pAhw0ja1Edb5GVdIF1mjZw/ASI0AlShXM83UUGe2DVr5TdAPEA1OA8m/g8zWp9x6On7gqufY+FatDbC3MDQg==}
@@ -1304,6 +1317,10 @@ packages:
   json-stable-stringify-without-jsonify@1.0.1:
     resolution: {integrity: sha512-Bdboy+l7tA3OGW6FjyFHWkP5LuByj1Tk33Ljyq0axyzdk9//JSi2u3fP1QSmd1KNwq6VOKYGlAu87CisVir6Pw==}
 
+  katex@0.16.11:
+    resolution: {integrity: sha512-RQrI8rlHY92OLf3rho/Ts8i/XvjgguEjOkO1BEXcU3N8BqPpSzBNwV/G0Ukr+P/l3ivvJUE/Fa/CwbS6HesGNQ==}
+    hasBin: true
+
   keyv@4.5.4:
     resolution: {integrity: sha512-oxVHkHR/EJf2CNXnWxRLW6mg7JyCCUcG0DtEGmL2ctUo1PNTin1PUil+r/+4r5MpVgC/fn1kjsx7mjSujKqIpw==}
 
@@ -1358,6 +1375,17 @@ packages:
     resolution: {integrity: sha512-EFNRZ08d8L/iEIPLTlQMDjvwIsj03gxWCczYTht6DCiHJIZhMk4NK5gtPY9UqAYb09eV5VGT+jD4lp396E0I+w==}
     peerDependencies:
       marked: '>=7.0.0'
+
+  marked-footnote@1.2.4:
+    resolution: {integrity: sha512-DB2Kl+wFh6YwZd70qABMY6WUkG1UuyqoNTFoDfGyG79Pz24neYtLBkB+45a7o72V7gkfvbC3CGzIYFobxfMT1Q==}
+    peerDependencies:
+      marked: '>=7.0.0'
+
+  marked-katex-extension@5.1.3:
+    resolution: {integrity: sha512-j4qu6XxFdP5v1VQ1QJ2I3H2DZLd0ak+98L0/IryZ/LHDcKikppHbaydNzVv3EE7t5/Tsrfuywnzlu46lCz0FrQ==}
+    peerDependencies:
+      katex: '>=0.16 <0.17'
+      marked: '>=4 <16'
 
   marked-shiki@1.1.1:
     resolution: {integrity: sha512-KTSMBhZM19a1m92GDvQ7NKGc8u1l80BRS2owceTYCXa+35ZPloa0p/V/eK9Ruw0T6mwX9f3IUw/zteRfNqJIaA==}
@@ -2514,6 +2542,8 @@ snapshots:
 
   '@types/json-schema@7.0.15': {}
 
+  '@types/katex@0.16.7': {}
+
   '@types/mdast@4.0.4':
     dependencies:
       '@types/unist': 3.0.3
@@ -2790,6 +2820,8 @@ snapshots:
   comma-separated-tokens@2.0.3: {}
 
   commander@4.1.1: {}
+
+  commander@8.3.0: {}
 
   commondir@1.0.1: {}
 
@@ -3163,6 +3195,10 @@ snapshots:
 
   json-stable-stringify-without-jsonify@1.0.1: {}
 
+  katex@0.16.11:
+    dependencies:
+      commander: 8.3.0
+
   keyv@4.5.4:
     dependencies:
       json-buffer: 3.0.1
@@ -3204,6 +3240,16 @@ snapshots:
 
   marked-alert@2.1.2(marked@15.0.3):
     dependencies:
+      marked: 15.0.3
+
+  marked-footnote@1.2.4(marked@15.0.3):
+    dependencies:
+      marked: 15.0.3
+
+  marked-katex-extension@5.1.3(katex@0.16.11)(marked@15.0.3):
+    dependencies:
+      '@types/katex': 0.16.7
+      katex: 0.16.11
       marked: 15.0.3
 
   marked-shiki@1.1.1(marked@15.0.3)(shiki@1.24.0):

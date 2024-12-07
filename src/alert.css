@@ -1,0 +1,51 @@
+.markdown-alert {
+	@apply border-l-4 pl-4 text-sm;
+}
+
+.markdown-alert-title {
+	@apply flex items-center font-medium;
+}
+
+.octicon {
+	@apply mr-2 fill-current;
+}
+
+.markdown-alert-note {
+	@apply border-l-[#0969da];
+}
+
+.markdown-alert-note .markdown-alert-title {
+	@apply text-[#0969da];
+}
+
+.markdown-alert-tip {
+	@apply border-l-[#1a7f37];
+}
+
+.markdown-alert-tip .markdown-alert-title {
+	@apply text-[#1a7f37];
+}
+
+.markdown-alert-important {
+	@apply border-l-[#8250df];
+}
+
+.markdown-alert-important .markdown-alert-title {
+	@apply text-[#8250df];
+}
+
+.markdown-alert-warning {
+	@apply border-l-[#9a6700];
+}
+
+.markdown-alert-warning .markdown-alert-title {
+	@apply text-[#9a6700];
+}
+
+.markdown-alert-caution {
+	@apply border-l-[#d1242f];
+}
+
+.markdown-alert-caution .markdown-alert-title {
+	@apply text-[#d1242f];
+}
