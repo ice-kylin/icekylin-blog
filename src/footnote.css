@@ -1,15 +1,15 @@
 [data-footnote-ref]::before {
-	content: '[';
+    content: '[';
 }
 
 [data-footnote-ref]::after {
-	content: ']';
+    content: ']';
 }
 
 [data-footnote-ref] {
-	@apply font-mono !text-primary !no-underline;
+    @apply font-mono !text-primary !no-underline;
 }
 
 [data-footnote-backref] {
-	@apply font-mono !text-primary !no-underline;
+    @apply font-mono !text-primary !no-underline;
 }

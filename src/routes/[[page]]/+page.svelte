@@ -15,7 +15,7 @@
 	});
 </script>
 
-<div class="mb-20 mt-12">
+<div class="mb-20 mt-8">
 	<ul class="mx-auto flex max-w-screen-xl flex-col gap-20 px-6 font-bold text-onSurfaceVariant">
 		{#each data.items as item}
 			<li>
@@ -29,7 +29,7 @@
 					<h1 class="text-[28px] text-onSurface transition-all hover:font-extrabold">
 						<a href={`/post/${item.slug}`}>{item.title}</a>
 					</h1>
-					<p class="font-medium">{item.description}</p>
+					<p class="mt-2 font-medium">{item.description}</p>
 					<p class="mt-2 font-mono text-xs font-medium">
 						{item.created}
 					</p>
@@ -70,21 +70,21 @@
 </svelte:head>
 
 <style>
-	.img-wrapper:hover::after {
-		animation: bg-hue-animation 10s infinite;
-	}
+    .img-wrapper:hover::after {
+        animation: bg-hue-animation 10s infinite;
+    }
 
-	@keyframes bg-hue-animation {
-		0% {
-			filter: hue-rotate(0deg);
-		}
+    @keyframes bg-hue-animation {
+        0% {
+            filter: hue-rotate(0deg);
+        }
 
-		50% {
-			filter: hue-rotate(180deg);
-		}
+        50% {
+            filter: hue-rotate(180deg);
+        }
 
-		100% {
-			filter: hue-rotate(0deg);
-		}
-	}
+        100% {
+            filter: hue-rotate(0deg);
+        }
+    }
 </style>
